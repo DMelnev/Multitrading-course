@@ -1,0 +1,6 @@
+/.idea/
+/Concurrency/gradle/
+/Concurrency/.gradle/
+/Concurrency/gradlew
+/Concurrency/gradlew.bat
+/Concurrency/build/
