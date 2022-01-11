@@ -1,4 +1,6 @@
-import java.util.Arrays;
+import sun.reflect.generics.tree.Tree;
+
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -53,6 +55,7 @@ public class Main {
         for (int i = 0; i < array.length; i++) {
             array[i] = (float) (array[i] * Math.sin(0.2f + i / 5f) * Math.cos(0.2f + i / 5f) * Math.cos(0.4f + i / 2f));
         }
+
         return System.currentTimeMillis() - before;
     }
 }
