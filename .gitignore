@@ -4,3 +4,5 @@
 /Concurrency/gradlew
 /Concurrency/gradlew.bat
 /Concurrency/build/
+/Concurrency/build.gradle
+/Concurrency/settings.gradle
