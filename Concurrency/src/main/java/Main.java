@@ -8,8 +8,8 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Start");
-        System.out.println("without concurrency " + withoutConcurrency());
-        System.out.println("with concurrency " + withConcurrency());
+        System.out.println("one thread " + withoutConcurrency());
+        System.out.println("two threads " + withConcurrency());
         System.out.println("five threads " + fiveThreadsConcurrency());
 //        System.out.println("without concurrency " + withoutConcurrency());
         System.out.println("\n finish");
@@ -30,11 +30,11 @@ public class Main {
                 for (int i = 0; i < arr1.length; i++) {
                     arr1[i] = (float) (arr1[i] * Math.sin(0.2f + i / 5f) * Math.cos(0.2f + i / 5f) * Math.cos(0.4f + i / 2f));
                     if (i % 1000000 == 0) {
-                        try {
-                            Thread.sleep(0);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
+//                        try {
+//                            Thread.sleep(0);
+//                        } catch (InterruptedException e) {
+//                            e.printStackTrace();
+//                        }
                     }
                 }
             }
@@ -44,11 +44,11 @@ public class Main {
             public void run() {
                 for (int i = 0; i < arr2.length; i++) {
                     arr2[i] = (float) (arr2[i] * Math.sin(0.2f + i / 5f) * Math.cos(0.2f + i / 5f) * Math.cos(0.4f + i / 2f));
-                    try {
-                        Thread.sleep(0);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+//                    try {
+//                        Thread.sleep(0);
+//                    } catch (InterruptedException e) {
+//                        e.printStackTrace();
+//                    }
                 }
             }
         });
@@ -106,11 +106,11 @@ public class Main {
             public void run() {
                 for (int i = 0; i < arr2.length; i++) {
                     arr2[i] = (float) (arr2[i] * Math.sin(0.2f + i / 5f) * Math.cos(0.2f + i / 5f) * Math.cos(0.4f + i / 2f));
-                    try {
-                        if (i % 1000 == 0) Thread.sleep(0);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+//                    try {
+//                        if (i % 1000 == 0) Thread.sleep(0);
+//                    } catch (InterruptedException e) {
+//                        e.printStackTrace();
+//                    }
                 }
             }
         });
@@ -119,11 +119,11 @@ public class Main {
             public void run() {
                 for (int i = 0; i < arr3.length; i++) {
                     arr3[i] = (float) (arr3[i] * Math.sin(0.2f + i / 5f) * Math.cos(0.2f + i / 5f) * Math.cos(0.4f + i / 2f));
-                    try {
-                        if (i % 1000 == 0) Thread.sleep(0);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+//                    try {
+//                        if (i % 1000 == 0) Thread.sleep(0);
+//                    } catch (InterruptedException e) {
+//                        e.printStackTrace();
+//                    }
                 }
             }
         });
@@ -132,11 +132,11 @@ public class Main {
             public void run() {
                 for (int i = 0; i < arr4.length; i++) {
                     arr4[i] = (float) (arr4[i] * Math.sin(0.2f + i / 5f) * Math.cos(0.2f + i / 5f) * Math.cos(0.4f + i / 2f));
-                    try {
-                        if (i % 1000 == 0) Thread.sleep(0);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+//                    try {
+//                        if (i % 1000 == 0) Thread.sleep(0);
+//                    } catch (InterruptedException e) {
+//                        e.printStackTrace();
+//                    }
                 }
             }
         });
@@ -145,11 +145,11 @@ public class Main {
             public void run() {
                 for (int i = 0; i < arr5.length; i++) {
                     arr5[i] = (float) (arr5[i] * Math.sin(0.2f + i / 5f) * Math.cos(0.2f + i / 5f) * Math.cos(0.4f + i / 2f));
-                    try {
-                        if (i % 1000 == 0) Thread.sleep(0);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+//                    try {
+//                        if (i % 1000 == 0) Thread.sleep(0);
+//                    } catch (InterruptedException e) {
+//                        e.printStackTrace();
+//                    }
                 }
             }
         });
