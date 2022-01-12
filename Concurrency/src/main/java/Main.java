@@ -1,9 +1,9 @@
 import java.util.*;
 
 public class Main {
-    private static int TEN_MLN = 50_000_000;
-    private static int FIVE_MLN = 25_000_000;
-    private static int TWO_MLN = 10_000_000;
+    private static int TEN_MLN = 10_000_000;
+    private static int FIVE_MLN = 5_000_000;
+    private static int TWO_MLN = 2_000_000;
 
 
     public static void main(String[] args) {
@@ -29,8 +29,12 @@ public class Main {
             public void run() {
                 for (int i = 0; i < arr1.length; i++) {
                     arr1[i] = (float) (arr1[i] * Math.sin(0.2f + i / 5f) * Math.cos(0.2f + i / 5f) * Math.cos(0.4f + i / 2f));
-                    if (i%1000000 == 0){
-                        thread1.
+                    if (i % 1000000 == 0) {
+                        try {
+                            Thread.sleep(0);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }
             }
@@ -40,6 +44,11 @@ public class Main {
             public void run() {
                 for (int i = 0; i < arr2.length; i++) {
                     arr2[i] = (float) (arr2[i] * Math.sin(0.2f + i / 5f) * Math.cos(0.2f + i / 5f) * Math.cos(0.4f + i / 2f));
+                    try {
+                        Thread.sleep(0);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         });
@@ -97,6 +106,11 @@ public class Main {
             public void run() {
                 for (int i = 0; i < arr2.length; i++) {
                     arr2[i] = (float) (arr2[i] * Math.sin(0.2f + i / 5f) * Math.cos(0.2f + i / 5f) * Math.cos(0.4f + i / 2f));
+                    try {
+                        if (i % 1000 == 0) Thread.sleep(0);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         });
@@ -105,6 +119,11 @@ public class Main {
             public void run() {
                 for (int i = 0; i < arr3.length; i++) {
                     arr3[i] = (float) (arr3[i] * Math.sin(0.2f + i / 5f) * Math.cos(0.2f + i / 5f) * Math.cos(0.4f + i / 2f));
+                    try {
+                        if (i % 1000 == 0) Thread.sleep(0);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         });
@@ -113,6 +132,11 @@ public class Main {
             public void run() {
                 for (int i = 0; i < arr4.length; i++) {
                     arr4[i] = (float) (arr4[i] * Math.sin(0.2f + i / 5f) * Math.cos(0.2f + i / 5f) * Math.cos(0.4f + i / 2f));
+                    try {
+                        if (i % 1000 == 0) Thread.sleep(0);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         });
@@ -121,6 +145,11 @@ public class Main {
             public void run() {
                 for (int i = 0; i < arr5.length; i++) {
                     arr5[i] = (float) (arr5[i] * Math.sin(0.2f + i / 5f) * Math.cos(0.2f + i / 5f) * Math.cos(0.4f + i / 2f));
+                    try {
+                        if (i % 1000 == 0) Thread.sleep(0);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         });
