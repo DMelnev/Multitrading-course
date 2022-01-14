@@ -80,6 +80,7 @@ public class Main {
             array[i] = (float) (array[i] * Math.sin(0.2f + i / 5f) * Math.cos(0.2f + i / 5f) * Math.cos(0.4f + i / 2f));
         }
 
+
         return System.currentTimeMillis() - before;
     }
 
