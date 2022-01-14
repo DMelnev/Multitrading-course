@@ -15,7 +15,7 @@ public class test {
             public void run() {
                 int sum1 = 0;
                 for (int i = 0; i < 1_000_000; i++) {
-                    if (i % 2 == 0) sum1++;
+                    if (i % 2 == 0) sum1+=i;
                 }
                 System.out.println("summ of even digits is " + sum1);
                 count.countDown();
@@ -25,9 +25,9 @@ public class test {
                     executorService.execute(new Runnable() {
             @Override
             public void run() {
-                int sum1 = 0;
+                long sum1 = 0;
                 for (int i = 0; i < 1_000_000; i++) {
-                    if (i % 7 == 0) sum1++;
+                    if (i % 7 == 0) sum1+=i;
                 }
                 System.out.println("summ of multiply 7 digits is " + sum1);
                 count.countDown();
