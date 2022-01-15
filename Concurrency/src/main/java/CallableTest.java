@@ -2,7 +2,7 @@ import java.util.concurrent.*;
 
 public class CallableTest {
     public static void main(String[] args) {
-        ExecutorService executorService = Executors.newSingleThreadExecutor(new ThreadFactory() {
+        ExecutorService executorService = Executors.newFixedThreadPool(3, new ThreadFactory() {
             @Override
             public Thread newThread(Runnable r) {
                 Thread thread = new Thread(r);
@@ -30,9 +30,17 @@ public class CallableTest {
                 return "John";
             }
         });
+        Future<Integer> futureAge = executorService.submit(new Callable<Integer>() {
+            @Override
+            public Integer call() throws Exception {
+                Thread.sleep(4000);
+                return 35;
+            }
+        });
         try {
             String name = futureName.get();
-            System.out.println("\n" + name);
+            int age = futureAge.get();
+            System.out.println("\n" + name + " " + age);
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
