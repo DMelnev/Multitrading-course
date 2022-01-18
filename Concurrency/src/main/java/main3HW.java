@@ -41,7 +41,8 @@ public class main3HW {
                             e.printStackTrace();
                         }
                         System.out.print(B);
-                        next = C;MONITOR.notifyAll();
+                        next = C;
+                        MONITOR.notifyAll();
                     }
                 }
             }
