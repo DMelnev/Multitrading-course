@@ -2,7 +2,7 @@ import java.util.concurrent.*;
 
 public class CallableTest {
     public static void main(String[] args) {
-        ExecutorService executorService = Executors.newFixedThreadPool(3, new ThreadFactory() {
+        ExecutorService executorService = Executors.newFixedThreadPool(2, new ThreadFactory() {
             @Override
             public Thread newThread(Runnable r) {
                 Thread thread = new Thread(r);
